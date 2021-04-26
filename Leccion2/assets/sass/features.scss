@@ -1,0 +1,34 @@
+//Features
+.features{
+    max-width: 100%;
+    padding: 60px 3%;
+}
+.features .wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.features .wrap h2{
+    text-align: center;
+}
+.features .wrap .raw{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.features .wrap .raw:first-of-type{
+    margin-bottom: 30px;
+}
+.features .wrap .raw .feature {
+  flex-basis: calc(33% - 30px);
+  text-align: center;
+}
+
+.features .wrap .raw .feature ion-icon{
+   font-size: 60px;
+   color: #C6538C;
+   margin-bottom: 25px;
+  }
+
+  .features .wrap .raw .feature p{
+    margin-bottom: 0;
+   }
