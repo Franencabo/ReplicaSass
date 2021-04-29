@@ -1,0 +1,40 @@
+//Bucles
+
+//Bucle for
+@for $i  from 1 through 100 {
+
+    .caja-#{$i}{
+        width: $i *1%;
+    }
+}
+
+//Bucle each itera sobre una lista o un mapa, reemplaza cada uno de los valores en cada una de las iteraciones
+
+// Con listas, sirve fundamentalmente para aplicar valores básicos (como palabras), en el siguiente ejemplo
+// al poner el color con su nombre, se le añade ese mismo nombre a un boton, de tal forma que quedará
+// boton-blue, boton-red.....
+$colors: blue, green, red;
+
+@each $color in $colors {
+    .button-#{$color}{
+        background-color: $color;
+    }
+}
+
+//Con mapas, tenemos una lista de clave:valor. Es más útil, porque aplicamos valores complejos (como colores hexadecimales) 
+//a una clave que nos ayuda a identificar ese color. Quedando un boton con el nombre que damos a ese color y su valor
+// hexadecimal. boton-base: #fff, boton-primary: #333......
+
+$colors: (
+    base: #fff,
+    primary : #333,
+    featured : #c6538c,
+    back: #f9f9f9
+);
+
+
+@each $key, $value in $colors {
+    .button-#{$key}{
+        background-color: $value;
+    }
+}
